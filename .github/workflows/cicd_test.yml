@@ -35,7 +35,7 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        python -m pytest -v --cov=. --cov-report=html --html=report.html test_calculadora.py
+        pytest -v --cov=. --cov-report=html --html=report.html test_calculadora.py
     - name: Build Clase
       run: |
         mkdir build
